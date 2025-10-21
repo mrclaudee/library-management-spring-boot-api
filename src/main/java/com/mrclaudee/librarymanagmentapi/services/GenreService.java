@@ -28,4 +28,9 @@ public class GenreService implements IGenreService {
 
          return genreMapper.toDto(entity);
     }
+
+    @Override
+    public void save(GenreDto genreDto) {
+        genreRepository.save(genreMapper.toEntity(genreDto));
+    }
 }
